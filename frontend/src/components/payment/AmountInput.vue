@@ -18,7 +18,7 @@
           ]"
           @click="selectAmount(amt)"
         >
-          {{ amt }}
+          {{ formatKrwAmount(amt) }}
         </button>
       </div>
     </div>
@@ -55,7 +55,7 @@ const props = withDefaults(defineProps<{
   min?: number
   max?: number
 }>(), {
-  amounts: () => [5000, 10000, 20000, 50000, 100000, 200000, 300000, 500000, 1000000],
+  amounts: () => [1200, 5400, 11000, 22000, 55000, 82400],
   min: 0,
   max: 0,
 })
@@ -81,6 +81,10 @@ const placeholderText = computed(() => {
 })
 
 const AMOUNT_PATTERN = /^\d*(\.\d{0,2})?$/
+
+function formatKrwAmount(amount: number): string {
+  return `${new Intl.NumberFormat('ko-KR').format(amount)}원`
+}
 
 function selectAmount(amt: number) {
   customText.value = String(amt)
