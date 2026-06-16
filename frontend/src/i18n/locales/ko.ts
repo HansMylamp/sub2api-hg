@@ -7,7 +7,7 @@ export default {
     "switchToLight": "라이트 모드로 전환",
     "switchToDark": "다크 모드로 전환",
     "dashboard": "대시보드",
-    "login": "로그인",
+    "login": "로그인.",
     "getStarted": "시작하기",
     "goToDashboard": "대시보드로 이동",
     "heroSubtitle": "하나의 키로 모든 AI 모델 사용",
